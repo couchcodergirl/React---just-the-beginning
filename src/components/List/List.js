@@ -24,7 +24,7 @@ class List extends React.Component {
         </div>
         <div className={styles.columns}>
           <Column columnTitle={'Books'} />
-          <Column columnTitle={'Games'} />
+          <Column columnTitle={'Sports'} />
           <Column columnTitle={'Movies'} />
         </div>
       </section>
