@@ -6,7 +6,7 @@ import Column from '../Column/Column.js';
 import PropTypes from 'prop-types';
 
 class List extends React.Component {
-  static PropTypes = {
+  static propTypes = {
     title: PropTypes.node.isRequired,
     children: PropTypes.node,
   }
