@@ -22,6 +22,24 @@ class Column extends React.Component {
     description: settings.defaultColumnIcon,
   };
 
+  state = {
+    cards: this.props.cards || [],
+  }
+
+  addCard(title){
+    this.setState(state => (
+      {
+        cards: [
+          ...state.cards,
+          {
+            key: state.cards.length ? state.cards[state.cards.length-1].key + 1 : 0,
+            title
+          }
+        ]
+      }
+    ));
+  }
+
   render() { 
     const { title, icon, cards, addCard} = this.props;
     return (
@@ -32,14 +50,14 @@ class Column extends React.Component {
           </span>
         </h3>
         <div className={styles.cards}>
-          {cards.map((cardData) => (
+          {this.state.cards.map((cardData) => (
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
         <div className={styles.creator}>
           <Creator 
             text={settings.cardCreatorText}
-            action={addCard}
+            action={title => this.addCard(title)}
           />
         </div>
       </section>
