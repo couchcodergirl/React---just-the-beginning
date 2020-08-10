@@ -7,7 +7,6 @@ import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
-
   static propTypes = {
     title: PropTypes.string,
     // cardTitle: Proptypes.string,
@@ -33,9 +32,9 @@ class Column extends React.Component {
           ...state.cards,
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key + 1 : 0,
-            title
-          }
-        ]
+            title,
+          },
+        ],
       }
     ));
   }
@@ -57,7 +56,7 @@ class Column extends React.Component {
         <div className={styles.creator}>
           <Creator 
             text={settings.cardCreatorText}
-            action={title => this.addCard(title)}
+            action={addCard}
           />
         </div>
       </section>
