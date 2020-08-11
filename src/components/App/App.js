@@ -9,6 +9,7 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{pageContents.title}</h1>
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+        <h3 className={styles.subtitle}>{pageContents.anotherSubtitle}</h3>
         <List {...listData} />
       </main>
     );
