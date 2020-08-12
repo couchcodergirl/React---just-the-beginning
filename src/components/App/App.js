@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './App.scss';
-//import List from '../List/List.js';
-import {pageContents, listData} from '../../data/dataStore';
+import List from '../List/List.js';
+//import {pageContents, listData} from '../../data/dataStore';
 import PropTypes from 'prop-types';
 
 class App extends React.Component {
   static propTypes = {
     title: PropTypes.node,
     subtitle: PropTypes.node,
+    lists: PropTypes.array,
   }
   render() {
-    const {title, subtitle} = this.props;
+    const {title, subtitle, lists} = this.props;
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
@@ -18,6 +19,9 @@ class App extends React.Component {
         {/*
         <List {...listData} />
         */}
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
       </main>
     );
   }
