@@ -1,16 +1,23 @@
 import React from 'react';
 import styles from './App.scss';
-import List from '../List/List.js';
+//import List from '../List/List.js';
 import {pageContents, listData} from '../../data/dataStore';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
+  static propTypes = {
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
+  }
   render() {
+    const {title, subtitle} = this.props;
     return (
       <main className={styles.component}>
-        <h1 className={styles.title}>{pageContents.title}</h1>
-        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-        <h3 className={styles.subtitle}>{pageContents.anotherSubtitle}</h3>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+        {/*
         <List {...listData} />
+        */}
       </main>
     );
   }

@@ -40,7 +40,7 @@ class Column extends React.Component {
   }
 
   render() { 
-    const { title, icon} = this.props;
+    const { title, icon } = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{title}

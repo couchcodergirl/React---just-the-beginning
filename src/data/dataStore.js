@@ -17,10 +17,11 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  anotherSubtitle: 'Some more text',
 };
 
 export const listData = {
-  title: 'Things to do <sup>soon!</sup>',
+  title: 'Things to do <sup>soon!</sup>, or even now',
   description: 'Interesting things I want to check out!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   columns: [

@@ -18,8 +18,11 @@
   text-transform: uppercase;
   color: $color-light;
   transform: translate(-50%,-50%);
+  text-align: center;
 }
-
+.subtitle {
+  font-size: 25px;
+}
 .image {
   position: absolute;
   top: 0;
