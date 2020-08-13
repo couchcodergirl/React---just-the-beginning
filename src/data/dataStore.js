@@ -87,25 +87,25 @@ const columns = [
     id: 'column-1',
     listId: 'list-1',
     title: 'Books',
-    icon: 'book',
+    icon: 'horse',
   },
   {
     id: 'column-2',
     listId: 'list-1',
     title: 'Movies',
-    icon: 'film',
+    icon: 'fish',
   },
   {
     id: 'column-3',
     listId: 'list-1',
     title: 'Games',
-    icon: 'gamepad',
+    icon: 'cat',
   },
   {
     id: 'column-4',
     listId: 'list-2',
     title: 'Strange column',
-    icon: 'question',
+    icon: 'dog',
   },
 ];
 
