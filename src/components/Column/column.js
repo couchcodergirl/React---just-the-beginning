@@ -9,11 +9,11 @@ import Icon from '../Icon/Icon.js';
 class Column extends React.Component {
   static propTypes = {
     title: PropTypes.string,
-    // cardTitle: Proptypes.string,
+    // cardTitle: PropTypes.string,
     cards: PropTypes.array,
     icon: PropTypes.node,
     addCard: PropTypes.func,
-    // name PropTypes.node,
+    // name: PropTypes.node,
   };
 
   static defaultProps = {
@@ -21,21 +21,20 @@ class Column extends React.Component {
     description: settings.defaultColumnIcon,
   };
 
-  render() { 
-    const {title, icon, cards} = this.props;
+  render() {
+    const { title, icon, cards} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{title}
           <span className={styles.icon}>
-            <Icon name={icon} />
+            <Icon name={icon} />  
           </span>
         </h3>
         <div className={styles.cards}>
-          {cards.map(cardData => (
+          {cards.map((cardData) => (
             <Card key={cardData.id} {...cardData} />
-          ))} 
-        </div>
-        
+          ))}
+        </div>        
         {/*<div className={styles.creator}>
           <Creator 
             text={settings.cardCreatorText}
