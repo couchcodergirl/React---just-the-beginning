@@ -1,3 +1,4 @@
+  
 // selectors
 export const getSearchString = ({searchString}) => searchString;
 
